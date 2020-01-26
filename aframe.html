@@ -2,6 +2,13 @@
 
 
 <body>
+
+	<a-assets>
+        <a-asset-item id="myModelObj" src="tree.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="tree.mtl"></a-asset-item>
+      </a-assets>
+
+
  <a-scene>
 
       <a-sky color="white"></a-sky>
@@ -22,6 +29,9 @@
         </a-entity>		
 		
 
+
+      <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" position="-4 -3 0"></a-entity>
+		
       <a-camera look-controls mouse-cursor cursor="rayOrigin: mouse;"></a-camera>
       
     </a-scene>
