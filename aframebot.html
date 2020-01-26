@@ -37,9 +37,12 @@
 		
 
 
-      <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" position="-4 -3 0"></a-entity>
+      <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" position="-4 -3 0">
+	  
+	  <a-animation attribute="rotation" dur="3000" begin="2000" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+	  </a-entity>
 	      <a-entity obj-model="obj: #botModelObj; mtl: #botModelMtl" position="-5 0 0">
-		  <a-animation attribute="rotation" dur="3000" begin="2000" to="0 360 0" repeat="inedfinite" easing="linear"></a-animation>
+		  <a-animation attribute="rotation" dur="3000"  to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
 		  
 		  </a-entity>
 	
