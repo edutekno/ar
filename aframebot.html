@@ -10,10 +10,14 @@
 <a-assets>
         <a-asset-item id="myModelObj" src="tree.obj"></a-asset-item>
         <a-asset-item id="myModelMtl" src="tree.mtl"></a-asset-item>
-		       <a-asset-item id="botModelObj" src="robot.obj"></a-asset-item>
+		
+		<a-asset-item id="botModelObj" src="robot.obj"></a-asset-item>
         <a-asset-item id="botModelMtl" src="robot.mtl"></a-asset-item>
 
 		
+		<a-asset-item id="kModelObj" src="knight.obj"></a-asset-item>
+        <a-asset-item id="kModelMtl" src="knight.mtl"></a-asset-item>
+
       </a-assets>
       <a-sky color="cyan"></a-sky>
       <a-box color="red" position="0 0 -4">
@@ -39,14 +43,22 @@
 
       <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" position="-4 -3 0">
 	  
-	  <a-animation attribute="scale" dur="3000" begin="1000" from="0.2 0.2 0.2" to="1 1 1" repeat="indefinite" easing="easy-in-out-circ" direction="alternate-reverse"></a-animation>
 	  </a-entity>
 	      <a-entity obj-model="obj: #botModelObj; mtl: #botModelMtl" position="-5 -1 1">
 		  <a-animation attribute="rotation" dur="3000"  to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
 		  
 		  </a-entity>
 	
-      <a-camera look-controls mouse-cursor cursor="rayOrigin: mouse;"></a-camera>
+	
+	  <a-entity>
+	      <a-entity obj-model="obj: #kModelObj; mtl: #kModelMtl" position="0 0 0">
+		  <a-animation attribute="rotation" dur="3000"  to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+		  
+		  </a-entity>
+		  </a-entity>
+
+
+	<a-camera look-controls mouse-cursor cursor="rayOrigin: mouse;"></a-camera>
       
     </a-scene>
 </body>
